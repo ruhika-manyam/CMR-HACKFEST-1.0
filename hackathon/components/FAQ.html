@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FREQUENTLY ASKED QUESTIONS</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../src/favicon.ico">
+    <link href="CSS/navbar.css" rel="stylesheet"/>
+    <link href="../style.css" rel="stylesheet"/>
+    <link href="CSS/center.css" rel="stylesheet"/>
+    <style>
+        .content{
+            font-size: 1rem;
+            color:#ffffff;
+            padding:0%;
+            width:80%;
+            margin:auto;
+            margin-top: 0%;
+            margin-bottom:3%;
+            border-radius: 20px;
+            backdrop-filter: blur(2px) saturate(180%);
+            -webkit-backdrop-filter: blur(2px) saturate(180%);
+            background-color: rgba(0, 0, 0, 0.5); 
+            border: 1px solid rgba(255, 255, 255, 0.125);
+            box-shadow:0 0 10px #fa0202;
+            text-align: left;
+        }
+
+        #particles-js{
+            position: fixed;
+            top:0;
+            left:0;
+            height:100%;
+            width:100%;
+            z-index:-9999;
+        }
+        center{
+            font-size: 2rem;
+            color:#fff;
+        }
+        .answer {
+            display: none;
+            margin-left: 20px;
+        }
+
+        .dropdown-btn {
+            cursor: pointer;
+            background-color: #73747a;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            text-align: left;
+            width: 100%;
+        }
+
+        @media (max-width:800px) {
+            .content{
+                font-size: 1rem;
+                margin-top: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="particles-js"></div>
+<nav class="header-nav">
+    <div class="branding">
+        <a href="../index.html"><img src="../src/HackInHub-Logo.png" alt=""></a>
+        <h1 class="brand-name">CMR HACKFEST 1.0</h1>
+    </div>
+
+    <div class="nav-buttons">
+        <a href="../index.html" class="nav-btn">Home</a>
+        <a href="/components/about.html" class="nav-btn">About</a>
+        <a href="/components/deadlines.html" class="nav-btn">Event Schedule</a>
+        <a href="/components/shortlist.html" class="nav-btn">Shortlisted Teams</a>
+        <a href="/components/Sponsorship.pdf" class="nav-btn ghost-btn">TO SPONSOR THE EVENT</a>
+
+    </div>
+</nav>
+<div class="nav-buttons-mobile hidden-nav">
+    <a href="../index.html" class="nav-btn">CMR HACKFEST 1.0</a>
+    <a href="/components/about.html" class="nav-btn">About</a>
+    <a href="/components/deadlines.html" class="nav-btn">Event Schedule</a>
+    <a href="/components/shortlist.html" class="nav-btn">Shortlisted Teams</a>
+    <a href="/components/Sponsorship.pdf" class="nav-btn ghost-btn">TO SPONSOR THE EVENT</a>
+
+</div>
+<div class="hamburger">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+</div>
+<div class="content">
+    <center><b><u>FREQUENTLY ASKED QUESTIONS</u></b></center>
+    <p><button class="dropdown-btn" onclick="toggleAnswer(1)"><b>1. How do I register for CMR HACKFEST 1.0</b></button></p>
+    <p id="answer1" class="answer">ANS - <b>i) Registration Link for Hackathon:</b><br><a href="https://forms.gle/NbNGRGB1JKkiJcvz6" target="_blank">https://forms.gle/NbNGRGB1JKkiJcvz6</a><br><b>ii) Registration Link for Project Expo:</b><br><a href="https://forms.gle/H9QFqdqe13TKSAin6" target="_blank">https://forms.gle/H9QFqdqe13TKSAin6</a></p>
+  <p><button class="dropdown-btn" onclick="toggleAnswer(2)"><b>2. What are the minimum requirements to participate in CMR HACKFEST 1.0?</b></button></p>
+    <p id="answer2" class="answer">ANS - <b>i) FOR HACKATHON:</b><br>A team of 3-4 students(with a combination of any engineering discipline/college are eligible)<br><b>ii) FOR PROJECT EXPO:</b><br>A team of 2-3 students(with a combination of any engineering discipline/college are eligible)</p>
+  <p><button class="dropdown-btn" onclick="toggleAnswer(3)"><b>3. Is there any deadline for registering to CMR HACKFEST 1.0</b></button></p>
+      <p id="answer3" class="answer">ANS - Yes, for HACKATHON by 20th JANUARY 2024 & for PROJECT EXPO by 29th JANUARY 2024</p>
+    <p><button class="dropdown-btn" onclick="toggleAnswer(4)"><b>4. How long is the CMR HACKFEST 1.0 running for?</b></button></p>
+      <p id="answer4" class="answer">ANS - HACKATHON - 36 HOURS , PROJECT EXPO - 1 DAY</p>
+    <p><button class="dropdown-btn" onclick="toggleAnswer(5)"><b>5. Can I bring the ready made project directly for CMR HACKFEST 1.0?</b></button></p>
+      <p id="answer5" class="answer">ANS - No, You should bring the components only, implementation should be done in 36 hours hackathon only</p>
+    <p><button class="dropdown-btn" onclick="toggleAnswer(6)"><b>6. Is there any on spot registration?</b></button></p>
+      <p id="answer6" class="answer">ANS - NO</p>
+    <p><button class="dropdown-btn" onclick="toggleAnswer(7)"><b>7. What if I never participated in a Hackathon earlier?</b></button></p>
+      <p id="answer7" class="answer">ANS - No problem, you may use this opportunity to prove yourself</p>
+    <p><button class="dropdown-btn" onclick="toggleAnswer(8)"><b>8. What are the prize Details of the HACKATHON?</b></button></p>
+      <div id="answer8" class="answer" style="display: none;">
+        <p>ANS - <b>FOR HACKATHON PRIZE POOL UPTO RS 1,00,000/-</b></p>
+        <p style="margin-left: 20px;">1st PRIZE - RS 50,000/-</p>
+        <p style="margin-left: 20px;">1st RUNNER UP - RS 30,000/-</p>
+        <p style="margin-left: 20px;">2nd RUNNER UP - RS 15,000/-</p>
+        <p style="margin-left: 20px;">CONSOLATION PRIZE - RS 5,000/-</p>
+        <p style="margin-left: 20px;">MANY MORE THEME WISE PRIZES</p>
+      </div>
+    <p><button class="dropdown-btn" onclick="toggleAnswer(9)"><b>9. What are the prize Details of the PROJECT EXPO</b></button></p>
+<div id="answer9" class="answer" style="display: none;">
+  <p>ANS - <b> FOR PROJECT EXPO PRIZE POOL UPTO RS 10,000/-</b></p>
+  <p style="margin-left: 20px;">1st PRIZE - RS 5,000/-</p>
+  <p style="margin-left: 20px;">1st RUNNER UP - RS 2,500/-</p>
+  <p style="margin-left: 20px;">2nd RUNNER UP - RS 1,500/-</p>
+  <p style="margin-left: 20px;">CONSOLATION PRIZE - RS 1,000/-</p>
+  <p style="margin-left: 20px;">MANY MORE THEME WISE PRIZES</p>
+</div>
+
+<p><button class="dropdown-btn" onclick="toggleAnswer(10)"><b>10. Is there any provision to attend virtual/online mode for CMR HACKFEST 1.0 if unable to attend offline?</b></button></p>
+      <p id="answer10" class="answer">ANS - NO, the event is completelt offline</p>
+    <p><button class="dropdown-btn" onclick="toggleAnswer(11)"><b>11. Are there any facilities provided for the participants during the HACKATHON?</b></button></p>
+      <p id="answer11" class="answer">ANS - Minimal facilities will be provided.</p>
+    <p><button class="dropdown-btn" onclick="toggleAnswer(12)"><b>12. Who will be the jury members for the CMR HACKFEST 1.0?</b></button></p>
+      <p id="answer12" class="answer">ANS - The jury members will be industry oriented people.</p>
+    <p><button class="dropdown-btn" onclick="toggleAnswer(13)"><b>13.What if I want to participate in multiple tracks?</b></button></p>
+      <p id="answer13" class="answer">ANS - Same team (with different team leader) can register for more than one event. But sufficient number of students should be available in both places throughout the competition</p>
+    <p><button class="dropdown-btn" onclick="toggleAnswer(14)"><b>14. Is there any possibility of changing the team members after getting registered?</b></button></p>
+      <p id="answer14" class="answer">ANS - Yes,you may. But it should be informed to us as well in advance</p>
+    <p><button class="dropdown-btn" onclick="toggleAnswer(15)"><b>15. Is the certificate given to the students who participated other than registered?</b></button></p>
+      <p id="answer15" class="answer">ANS - No,the certificates are strictly issued only to the students who paid registration fee and participation is mandatory.</p>
+    <p><button class="dropdown-btn" onclick="toggleAnswer(16)"><b>16. How the winners of the CMR HACKFEST 1.0 will be decided?</b></button></p>
+      <p id="answer16" class="answer">ANS - Based on performance in all rounds, the winners will be decided by the esteemed Jury members</p>
+    <p><button class="dropdown-btn" onclick="toggleAnswer(17)"><b>17. Is there any provision for participation certificate?</b></button></p>
+      <p id="answer17" class="answer">ANS - Every student who paid and participated in the competition will be getting the hard copy of the participation certificate</p>
+    <p><button class="dropdown-btn" onclick="toggleAnswer(18)"><b>18. Is Prototype model (in case of hardware projects) mandatory for PROJECT EXPO?</b></button></p>
+      <p id="answer18" class="answer">ANS - YES</p>
+    <p><button class="dropdown-btn" onclick="toggleAnswer(19)"><b>19. Can I use the project in my career portfolio?</b></button></p>
+      <p id="answer19" class="answer">ANS - YES</p>
+    <p><button class="dropdown-btn" onclick="toggleAnswer(20)"><b>20. What is the registration fee for participating in CMR HACKFEST 1.0?</b></button></p>
+      <div id="answer20" class="answer" style="display: none;">
+        <p>ANS - FOR HACKATHON - Rs 1000/- (per team which includes accommodation with minimal facilities & food)</p>
+        <p style="margin-left: 20px;">FOR PROJECT EXPO - Rs 300/- only for shortlisted teams.</p>
+      </div>      
+    <p><button class="dropdown-btn" onclick="toggleAnswer(21)"><b>21. What if I have more questions?</b></button></p>
+<div id="answer21" class="answer" style="display: none;">
+  <p>ANS - If you have more questions, you can contact the coordinators -</p>
+  <p style="margin-left: 20px;"><b>i) FOR HACKATHON:</b></p>
+  <p style="margin-left: 40px;">Mr.K.Ravi Kiran - 9701227088</p>
+  <p style="margin-left: 40px;">Mr.B.Venkateshwar Rao - 8985193337</p>
+  <p style="margin-left: 20px;"><b>ii) FOR PROJECT EXPO:</b></p>
+  <p style="margin-left: 40px;">Mrs.Tulasi Reddy - 9398754485.</p>
+</div>
+<p><button class="dropdown-btn" onclick="toggleAnswer(22)"><b>22. Where is the competition conducted?</b></button></p>
+<div id="answer22" class="answer" style="display: none;">
+  <p>ANS - CMR COLLEGE OF ENGINEERING & TECHNOLOGY</p>
+  <p style="margin-left: 20px;">KANDLAKOYA</p>
+  <p style="margin-left: 20px;">MEDCHAL ROAD</p>
+  <p style="margin-left: 20px;">HYDERABAD-501401, TELANGANA</p>
+  <p style="margin-left: 20px;">Click the below link for location</p>
+  <p style="margin-left: 20px;"><a href="https://maps.app.goo.gl/8sTh5GCVaijANtWQ7" target="_blank">https://maps.app.goo.gl/8sTh5GCVaijANtWQ7</a></p>
+</div>
+    </div>
+    <a href="#" class="top">↑</a>
+    <script src="JS/navbar.js"></script>
+    <script src="JS/particles.js"></script>
+    <script src="JS/lessparticle.js"></script>
+        <script>
+      function toggleAnswer(questionNumber) {
+        var answerId = 'answer' + questionNumber;
+        var answerElement = document.getElementById(answerId);
+
+        if (answerElement.style.display === 'none') {
+          answerElement.style.display = 'block';
+        } else {
+          answerElement.style.display = 'none';
+        }
+      }
+    </script>
+  </body>
+</html>

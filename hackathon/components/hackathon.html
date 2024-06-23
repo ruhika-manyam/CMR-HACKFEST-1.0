@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HACKATHON</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../src/favicon.ico">
+    <link href="CSS/navbar.css" rel="stylesheet"/>
+    <link href="../style.css" rel="stylesheet"/>
+    <link href="CSS/center.css" rel="stylesheet"/>
+    <style>
+        .content {
+            font-size: 1.5rem;
+            color: #ffffff;
+            padding: 0%;
+            width: 80%;
+            margin: auto;
+            margin-top: 0%;
+            margin-bottom: 3%;
+            border-radius: 20px;
+            backdrop-filter: blur(2px) saturate(180%);
+            -webkit-backdrop-filter: blur(2px) saturate(180%);
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.125);
+            box-shadow: 0 0 10px #fa0202;
+            text-align: left;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -9999;
+        }
+
+        center {
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        .answer {
+            display: none;
+            margin-left: 20px;
+        }
+
+        @media (max-width:800px) {
+            .content {
+                font-size: 1rem;
+                margin-top: 35%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <nav class="header-nav">
+        <div class="branding">
+            <a href="../index.html"><img src="../src/HackInHub-Logo.png" alt=""></a>
+            <h1 class="brand-name">CMR HACKFEST 1.0</h1>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="../index.html" class="nav-btn">Home</a>
+            <a href="/components/about.html" class="nav-btn">About</a>
+            <a href="/components/deadlines.html" class="nav-btn">Event Schedule</a>
+
+            <a href="/components/FAQ.html" class="nav-btn">FAQ</a>
+            <a href="/components/shortlist.html" class="nav-btn">Shortlisted Teams</a>
+            <a href="/components/Sponsorship.pdf" class="nav-btn ghost-btn">TO SPONSOR THE EVENT</a>
+
+        </div>
+    </nav>
+    <div class="nav-buttons-mobile hidden-nav">
+        <a href="../index.html" class="nav-btn">CMR HACKFEST 1.0</a>
+        <a href="/components/about.html" class="nav-btn">About</a>
+        <a href="/components/deadlines.html" class="nav-btn">Event Schedule</a>
+        <a href="/components/FAQ.html" class="nav-btn">FAQ</a>
+        <a href="/components/shortlist.html" class="nav-btn">Shortlisted Teams</a>
+        <a href="/components/Sponsorship.pdf" class="nav-btn ghost-btn">TO SPONSOR THE EVENT</a>
+
+    </div>
+    <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </div>
+    <div class="content">
+        <center><b><u>HACKATHON</u></b></center>
+        <center><a href="/components/Hackathon_Teams_Shortlisted.pdf" class="nav-hackathon ghost-btn">SHORTLISTED TEAMS FOR HACKATHON</a></center>
+            <p><strong>Hackathon Competition:</strong></p>
+            <p> Problem Statements given by Industries as student projects under the following themes:</p>
+        <ul>
+            <li>Clean and Renewable Energy</li>
+            <li>Transportation & Logistics</li>
+            <li>Waste Management</li>
+            <li>Health</li>
+            <li>Agriculture</li>
+            <li>Smart Education</li>
+            <li>Open Innovation</li>
+        </ul>
+        <p>The best Hackathon Projects will receive a Prize pool money up to Rs. 1,00,000 and also a few Surprise Gifts. Apart from awards, innovative projects have the opportunity to get incubation support, mentorship, industry networking, resources, and training.</p>
+        </strong></u>
+    </div>
+    <a href="#" class="top">↑</a>
+    <script src="JS/navbar.js"></script>
+    <script src="JS/particles.js"></script>
+    <script src="JS/lessparticle.js"></script>
+</body>
+</html>

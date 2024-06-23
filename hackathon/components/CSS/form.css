@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap');
+
+.form-element{
+    background: black;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+*{
+    box-sizing: border-box;
+    
+}
+
+
+.form_1{
+    height: 185rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px #E53935;
+    backdrop-filter: blur(1px) saturate(180%);
+    -webkit-backdrop-filter: blur(1px) saturate(180%);
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.form_1 h1{
+    color: white;
+}
+
+form{
+    padding: 60px;
+    box-shadow: 0 0 10px #E53935;
+    border-radius: 12px;
+    width: 60vw;
+    max-width: calc(100% - 60px);
+}
+
+/*hover effect for the input fields*/
+.form-element {
+    position: relative;
+    width: 100%;
+    margin: 12px 5px;
+    --accent-color:#E53935 ;
+  }
+  
+  .form-element:before {
+    transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+  }
+  
+  .form-element:before,
+  .form-element:after {
+    content: "";
+    left: 0;
+    right: 0;
+    position: absolute;
+    pointer-events: none;
+    bottom: -1px;
+    z-index: 4;
+    width: 100%;
+  }
+  
+  .form-element:focus-within:before {
+    border-bottom: 1px solid var(--accent-color);
+  }
+  
+  .form-element:before {
+    transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+  }
+  
+  .form-element:focus-within:before {
+    border-bottom: 1px solid var(--accent-color);
+    transform: scaleX(1);
+  }
+  
+  .form-element:focus-within:after {
+    border-bottom: 2px solid var(--accent-color);
+    transform: scaleX(1);
+  }
+  
+  .form-element:after {
+    content: "";
+    transform: scaleX(0);
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    will-change: transform;
+    border-bottom: 2px solid var(--accent-color);
+    border-bottom-color: var(--accent-color);
+  }
+  
+  .textInput::placeholder {
+    transition: opacity 550ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    opacity: 1;
+    user-select: none;
+    color: rgba(255, 255, 255, 0.582);
+  }
+  
+  .form-element .textInput {
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0px 2px 5px rgb(35 35 35 / 30%);
+    max-height: 36px;
+    background-color: #353535;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 200ms;
+    transition-property: background-color;
+    color: #e8e8e8;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px;
+    width: 100%;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+  }
+  
+  .form-element .textInput:focus,
+  .form-element .textInput:active {
+    outline: none;
+  }
+  
+  .form-element:focus-within .textInput,
+  .form-element .textInput:focus,
+  .form-element .textInput:active {
+    background-color: #353535;
+  }
+  
+  .form-element:focus-within .textInput::placeholder {
+    opacity: 0;
+  }
+
+  /*---------------------------------------------------------*/
+.form-element{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.form-element span{
+    margin-bottom: 10px;
+}
+
+input,textarea{
+    border: 1px solid white;
+    line-height: 2;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.radioButton label{
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.form_1 button{
+    font-size: 1.4rem;
+    color: white;
+    background-color: black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+    text-decoration: none;
+    padding: .75rem 1.25rem;
+    background-color: #E53935;
+    border-radius: 12px;
+    font-family: 'Poppins';
+    outline: 1px solid #E53935;
+  }
+
+.form_1 button:hover{
+    color: white;
+    background-color: #E53935;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.1);
+    font-family: 'Poppins';
+    cursor: pointer;
+  }
+
+  .probbutton button{
+    font-size: 1rem;
+    color: white;
+    background-color: #E53935;
+    transition: transform 0.3s ease, background-color 0.3s;
+    text-decoration: none;
+    padding: .75rem 1.25rem;
+    border-radius: 12px;
+    outline: 1px solid #E53935;
+
+  }
+
+  .probbutton button:hover{
+    color: white;
+    background-color: #E53935;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #E53935;
+    cursor: pointer;
+  }
+
+  .form-element select {
+    border: 1px solid white;
+    line-height: 2;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Style the options in the dropdown */
+.form-element select option {
+    background-color: black;
+    color: white;
+}
+
+.probbutton h3{
+    color: white;
+    font-size: 16px;
+}
+
+
+/* Animation for input labels */
+.input-field:focus + .input-label,
+.input-field:valid + .input-label {
+  color: #6658d3;
+  transform: translateY(-1.5rem);
+}
+
+/* Style text, email, and phone inputs as lines */
+.form-element input[type="text"],
+.form-element input[type="email"]{
+  border: none;
+  color: white;
+   /* Add a bottom border */
+   background-color: #353535; /* Make the background transparent */
+  width: 100%;
+  padding: 5px; /* Add some padding for spacing */
+  margin: 5px 0; /* Add margin for spacing between inputs */
+  outline: none; /* Remove the default input outline */
+}
+
+/* Style number input fields and disable spinner buttons */
+    .form-element input[type="number"] {
+        border: none;
+         /* Add a bottom border */
+        color: white;
+        background-color: #353535;   /* Make the background transparent */
+        width: 100%;
+        padding: 5px; /* Add some padding for spacing */
+        margin: 5px 0; /* Add margin for spacing between inputs */
+        outline: none; /* Remove the default input outline */
+        -webkit-appearance: textfield; /* Disable spinner buttons for WebKit browsers */
+        -moz-appearance: textfield; /* Disable spinner buttons for Firefox */
+    }
+    
+    .form-element input[type="number"] {
+      /* Remove the default input outline */
+      -webkit-appearance: textfield; /* Disable spinner buttons for WebKit browsers */
+      -moz-appearance: textfield; /* Disable spinner buttons for Firefox */
+  }
+  
+
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+::-webkit-input-placeholder{
+  font-family: 'Poppins';
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.582);
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media (max-width:800px){
+    .form_1{
+        height: 190rem;
+        padding: 0;
+    }
+  }
+  
+

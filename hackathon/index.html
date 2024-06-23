@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CMR HACKFEST 1.0</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Hack In Hub"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="src/favicon.ico">
+  <link href="components/CSS/navbar.css" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+  <link href="components/CSS/center.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link href="components/CSS/domain.css" rel="stylesheet"/>
+  <link href="components/CSS/footer.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/powerglitch@latest/dist/powerglitch.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    img {
+      height: 100%;
+      width: 100%;
+    }
+
+    #parent-container {
+      margin: 0 auto;
+      height: 600px;
+      width: 800px;
+      max-width: 100%;
+      overflow: hidden;
+      position: relative;
+      background: rgb(0, 0, 0);
+    }
+
+    #parent-container input[type=radio] {
+      display: none;
+    }
+
+    #parent-container label {
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    #slides {
+      padding: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    #overflow {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    #frame1:checked~#slides .inner {
+      margin-left: 0;
+    }
+
+    #frame2:checked~#slides .inner {
+      margin-left: -100%;
+    }
+
+    #slides .inner {
+      transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+      width: 200%;
+      line-height: 0;
+      height: 300px;
+    }
+
+    #slides .frame {
+      width: 50%;
+      float: left;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      color: black;
+    }
+
+    #controls {
+      margin: -180px 0 0 0;
+      width: 100%;
+      height: 50px;
+      z-index: 3;
+      position: relative;
+    }
+
+    #controls label {
+      transition: opacity 0.2s ease-out;
+      display: none;
+      width: 50px;
+      height: 50px;
+      opacity: .4;
+    }
+
+    #controls label:hover {
+      opacity: 1;
+    }
+
+    #parent-container input[type=radio]:checked~#controls label:nth-child(2),
+    #parent-container input[type=radio]:checked~#controls label:nth-child(1) {
+      float: right;
+      margin: 0 -50px 0 0;
+      display: block;
+    }
+
+    #parent-container input[type=radio]:checked~#controls label:nth-last-child(2),
+    #parent-container input[type=radio]:checked~#controls label:nth-last-child(1) {
+      float: left;
+      margin: 0 0 0 -50px;
+      display: block;
+    }
+
+    #bullets {
+      margin: 150px 0 0;
+      text-align: center;
+    }
+
+    #bullets label {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      background: #ccc;
+      margin: 0 10px;
+    }
+
+    #parent-container input[type=radio]:checked~#bullets label:nth-child(1),
+    #parent-container input[type=radio]:checked~#bullets label:nth-child(2) {
+      background: #444;
+    }
+  </style>
+</head>
+<body id="hackathon">
+<!--   <marquee>
+    <img width="40px"src="../static/images/new-blinking-gif.gif"/>
+    <span>Registration closes on 5th October 2023!!</span> 
+  </marquee> -->
+  <div id="particles-js"></div>
+  <nav class="header-nav">
+    <div class="branding">
+        <a href="/index.html"><img class="theinevitable" src="src/HackInHub-Logo.png" alt=""></a>
+        <h1 class="brand-name">CMR HACKFEST 1.0</h1>
+    </div>
+    <div class="nav-buttons">
+        <a href="/components/about.html" class="nav-btn">About</a>
+        <a href="/components/deadlines.html" class="nav-btn">Event Schedule</a>
+        <a href="/components/shortlist.html" class="nav-btn">Shortlisted Teams</a>
+        <a href="/components/FAQ.html" class="nav-btn">FAQ</a>
+        <a href="/components/Sponsorship.pdf" class="nav-btn ghost-btn">TO SPONSOR THE EVENT</a>
+    </div>
+  </nav>
+
+  <div class="nav-buttons-mobile hidden-nav">
+    <a href="/components/about.html" class="nav-btn">About</a>
+    <a href="/components/deadlines.html" class="nav-btn">Event Schedule</a>
+    <a href="/components/shortlist.html" class="nav-btn">Shortlisted Teams</a>
+    <a href="/components/FAQ.html" class="nav-btn">FAQ</a>
+    <a href="/components/Sponsorship.pdf" class="nav-btn ghost-btn">TO SPONSOR THE EVENT</a>
+  </div>
+
+  <div class="hamburger">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+  </div>
+  <center>
+    <div id="parent-container">
+        <input type="radio" name="frame" id="frame1" checked />
+        <input type="radio" name="frame" id="frame2" />
+        <div id="slides">
+            <div id="overflow">
+                <div class="inner">
+                    <div class="frame">
+                        <img src="src/HackInHub-Logo1.png">
+                    </div>
+                    <div class="frame">
+                        <img src="src/HackInHub-Logo2.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="controls">
+            <label for="frame1"></label>
+            <label for="frame2"></label>
+        </div>
+        <div id="bullets">
+            <label for="frame1"></label>
+            <label for="frame2"></label>
+        </div>
+    </div>
+    <h1 class="join-build-learn">THINK OUT OF THE BOX</h1>
+    <p class="desc">CMR HACKFEST 1.0 is an exhilarating and innovative <span>36 hours</span> Hackathon and <span>1 day</span> Project Competition that aims to bring together bright minds and creative thinkers from various institutions to collaborate, ideate and innovate in the realm of technology and beyond. </p>
+    <br id="schedule-mobile">
+    <a href="/components/Hackathon_Teams_Shortlisted.pdf" class="page-button">SHORTLISTED TEAMS FOR HACKATHON</a>
+    <br>
+    <br>
+    <br>
+    <a href="/components/Projectexpo_shortlisted.pdf" class="page-button">SHORTLISTED TEAMS FOR PROJECT EXPO</a>
+  </center>
+  <br>
+  <br id="schedule">
+  <h1 class="sub-title">EVENT SCHEDULE FOR HACKATHON</h1>
+  <schedule>
+    <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="600" class="phase">
+      <img class="phase-img" src="src/schedule/registration.svg" />
+      <div class="phase-text">
+        <p class="phase-id">PHASE 1</p>
+        <p class="phase-name">REGISTRATIONS CLOSED</p>
+        <p class="phase-deadline">ACCEPTANCE NOTIFICATION ON 27th JANUARY 2024</p>
+        <p class="phase-deadline">SHORTLISTED TEAMS WILL BE ANNOUNCED THROUGH MAIL</p>
+      </div>
+    </div>
+    <div data-aos="fade-left" data-aos-delay="300" data-aos-duration="600" class="phase-2">
+      <img class="phase-img" src="src/schedule/hackathon.svg" />
+      <div class="phase-text">
+        <p class="phase-id">PHASE 2</p>
+        <p class="phase-name">  HACKATHON</p>
+        <p class="phase-deadline">1st & 2nd March 2024</p>
+      </div>
+    </div>
+    <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="600" class="phase-4">
+      <img class="phase-img" src="src/schedule/evaluation.svg" />
+      <div class="phase-text">
+        <p class="phase-id">PHASE 3</p>
+        <p class="phase-name">EVALUATION</p>
+        <p class="phase-deadline">DONE BY THE ESTEEMED JURY MEMBERS</p>
+      </div>
+    </div>
+    <div data-aos="fade-left" data-aos-delay="300" data-aos-duration="600" class="phase">
+      <img class="phase-img" src="src/schedule/winner.svg" />
+      <div class="phase-text">
+        <p class="phase-id">PHASE 4</p>
+        <p class="phase-name">RESULTS</p>
+        <p id="domains-mobile" class="phase-deadline">WILL BE ANNOUNCED AFTER 36 HOURS</p>
+      </div>
+      </div>
+    <h1 class="sub-title">EVENT SCHEDULE FOR PROJECT EXPO</h1>
+    <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="600" class="phase">
+      <img class="phase-img" src="src/schedule/registration.svg" />
+      <div class="phase-text">
+        <p class="phase-id">PHASE 1</p>
+        <p class="phase-name">REGISTRATIONS CLOSED</p>
+        <p class="phase-deadline">ACCEPTANCE NOTIFICATION ON 5th FEBRUARY</p>
+        <p class="phase-deadline">SHORTLISTED TEAMS WILL BE ANNOUNCED THROUGH MAIL</p>
+      </div>
+    </div>
+    <div data-aos="fade-left" data-aos-delay="300" data-aos-duration="600" class="phase-4">
+      <img class="phase-img" src="src/schedule/Idea-submission.svg" />
+      <div class="phase-text">
+        <p class="phase-id">PHASE 2</p>
+        <p class="phase-name">PROJECT EXPO</p>
+        <p class="phase-deadline">2nd MARCH</p>
+      </div>
+    </div>
+    <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="600" class="phase-4">
+      <img class="phase-img" src="src/schedule/evaluation.svg" />
+      <div class="phase-text">
+        <p class="phase-id">PHASE 3</p>
+        <p class="phase-name">EVALUATION</p>
+        <p class="phase-deadline">DONE BY THE ESTEEMED JURY MEMBERS</p>
+      </div>
+    </div>
+    <div data-aos="fade-left" data-aos-delay="300" data-aos-duration="600" class="phase">
+      <img class="phase-img" src="src/schedule/winner.svg" />
+      <div class="phase-text">
+        <p class="phase-id">PHASE 4</p>
+        <p class="phase-name">RESULTS</p>
+        <p id="domains-mobile" class="phase-deadline">WILL BE ANNOUNCED ON THAT DAY ITSELF</p>
+      </div>
+    </div>
+    <CENTER><a href="/components/deadlines.html" class="nav-hackathon ghost-btn">FOR DETAILED EVENT SCHEDULE CLICK HERE</a>
+  </center>
+  </schedule>
+  <br id="domains">
+  <h1 class="sub-title">Domains</h1>
+  <main id="domains">
+    <div class="button1">
+      <button id="prev"><img src="src/icons8-back-arrow-50.png"/></button>
+    </div>
+    <div class="carousel-container">
+      <div id="carousel">
+        <div id="WASTE MANAGEMENT" class="prevLeftSecond">
+          <a href="/components/tables.html#WM-redirect" target="_blank">
+            <img class="domain-card" src="src/Domain/waste_management.png">
+            <br>
+            <span>WASTE MANAGEMENT</span>
+          </a>
+        </div>
+        <div id="SMART EDUCATION" class="prev">
+          <a href="/components/tables.html#SE-redirect" target="_blank">
+            <img class="domain-card" src="src/Domain/smart_edu.png">
+            <br>
+            <span>SMART EDUCATION</span>
+          </a>
+        </div>
+        <div id="CLEAN & RENEWABLE ENERGY" class="selected">
+          <a href="/components/tables.html#CRE-redirect" target="_blank">
+            <img class="domain-card" src="src/Domain/energy.png">
+            <br>
+            <span>CLEAN & RENEWABLE ENERGY</span>
+          </a>
+        </div>
+        <div id="HEALTH" class="next">
+          <a href="/components/tables.html#HE-redirect" target="_blank">
+            <img class="domain-card" src="src/Domain/medtech.png">
+            <br>
+            <span>HEALTH</span>
+          </a>
+        </div>
+        <div id="TRANSPORTATION & LOGISTICS" class="nextRightSecond">
+          <a href="/components/tables.html#TL-redirect" target="_blank">
+            <img class="domain-card" src="src/Domain/logistics.png">
+            <br>
+            <span>TRANSPORTATION & LOGISTICS</span>
+          </a>
+        </div>
+        <div id="AGRICULTURE" class="nextRightSecond">
+          <a href="/components/tables.html#AG-redirect" target="_blank">
+            <img class="domain-card" src="src/Domain/agriculture.png">
+            <br>
+            <span>AGRICULTURE</span>
+          </a>
+        </div>
+        <div id="OPEN INNOVATION" class="nextRightSecond">
+          <a href="/components/tables.html#-redirect" target="_blank">
+            <img class="domain-card" src="src/Domain/misc.png">
+            <br>
+            <span>OPEN INNOVATION</span>
+          </a>
+        </div>
+      </div>
+    
+    <div id="domain-name">CLEAN & RENEWABLE ENERGY</div>
+    </div>
+    <div class="button2">
+      <button id="next"><img src="src/icons8-forward-button-50.png"/></button>
+    </div>
+
+  </main>
+  <footer id="footer">
+
+    <div class="contact-card">
+        <center><b>CONTACT</b></center>
+        <br>
+        <div class="mail">
+          <img src="src/footerlogos/mail.png"/>
+          <a href="mailto:cmrhackfest@cmrcet.ac.in">cmrhackfest@cmrcet.ac.in</a>
+        </div>
+        <br>
+        <div class="profile">
+          <div><b> FOR HACKATHON</b></div>
+        <div>
+            <img src="src/footerlogos/person.png"/>
+            Mr.K.Ravi Kiran
+          </div>
+          <div>
+            <img src="src/footerlogos/phone.png" alt="">
+            <a href="tel:+919701227088">9701227088</a>
+          </div>
+        </div>
+        <br>
+        <div class="profile">
+          <div>
+            <img src="src/footerlogos/person.png"/>
+            Mr.B.Venkateshwar Rao
+          </div>
+          <div>
+            <img src="src/footerlogos/phone.png" alt="">
+            <a href="tel:+918985193337">8985193337</a>
+          </div>
+        </div> 
+        <br>
+        <div class="profile">
+          <div><b> FOR PROJECT EXPO</b></div>
+          <div>
+            <img src="src/footerlogos/person.png"/>
+            Mrs.Tulasi Reddy
+          </div>
+          <div>
+            <img src="src/footerlogos/phone.png" alt="">
+            <a href="tel:+919398754485">9398754485</a>
+          </div>
+        </div> 
+      </div>
+
+      <div class="location-card">
+        <div>
+          <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3802.9592002759996!2d78.48394557389247!3d17.60467219651173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb850bb545e95b%3A0x4367e509f5ff38e5!2sCMR%20College%20of%20Engineering%20%26%20Technology%2C%20Hyderabad%20(CMRCET%2FCMRK)!5e0!3m2!1sen!2sin!4v1704028620055!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <br>
+        <div class="address">
+          <span>CMR COLLEGE OF ENGINEERING & TECHNOLOGY</span>
+          <p>KANDLAKOYA, MEDCHAL ROAD,</p>
+          <p>HYDERABAD -501401, TELANGANA</p>
+        </div>
+      </div>
+</footer>
+  <a href="#" class="top">↑</a>
+  <script src="components/JS/domain.js"></script>
+  <script src="components/JS/navbar.js"></script>
+  <script src="components/JS/particles.js"></script>
+  <script src="app.js"></script>
+  <script>AOS.init();
+  <script src="components/JS/domain.js"></script>
+    <script src="components/JS/navbar.js"></script>
+    <script src="components/JS/particles.js"></script>
+    <script src="app.js"></script>
+    <script>
+        AOS.init();
+        // Automatic slider after 2 seconds
+        setInterval(function () {
+            var currentFrame = document.querySelector('input[name="frame"]:checked');
+            var nextFrame = currentFrame.nextElementSibling || document.getElementById("frame1");
+            nextFrame.checked = true; }, 2000);
+    </script>
+</body>
+</html>
